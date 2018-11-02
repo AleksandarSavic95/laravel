@@ -18,3 +18,5 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return 'Vozdra!';
 })->middleware('home');
+
+Route::get('/houm', 'HomeController@index');

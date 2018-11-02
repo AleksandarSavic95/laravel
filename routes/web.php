@@ -20,3 +20,5 @@ Route::get('/home', function () {
 })->middleware('home');
 
 Route::get('/houm', 'HomeController@index');
+
+Route::get('/vikendica', 'HomeController@weekendHouse');

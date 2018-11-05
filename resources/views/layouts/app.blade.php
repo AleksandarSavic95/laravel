@@ -29,5 +29,22 @@
 
         @include('layouts.footer')
     </div>
+
+    <script src="{{ asset('js/b4.js') }}"></script>
+
+    <script src="{{ asset('js/scope-test.js') }}"></script>
+
+    <script>
+        var script = 'script';
+        console.log('~~~~ script ~~~~');
+        console.log(b4);
+        // console.log(inside); // ReferenceError
+        // console.log(after); // ReferenceError
+        console.log(out);
+        console.log(script);
+        console.log('~~~~ /script ~~~~');
+    </script>
+
+    <script src="{{ asset('js/after.js') }}"></script>
 </body>
 </html>

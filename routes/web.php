@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/houm', 'HomeController@index');
+Route::get('/houm', 'HomeController@zero');
 
 Route::get('/vikendica', 'HomeController@weekendHouse');
 

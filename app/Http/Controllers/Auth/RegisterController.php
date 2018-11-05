@@ -49,12 +49,20 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:6', 'confirmed'],
+            'first_name' => 'required|string|max:255',
+            'last_name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'required|string|min:6|confirmed',
+            'country' => [
+                'required','string',
+                // 'exists:countries,name', // TODO: return this when table for countries is createds
+                'max:100'
+            ],
+            // this approach is also valid: ( implode($glue, $arrayOfPieces) )
+            // 'country' => 'required|string|max:100|in:'. implode(',', $this->countryList),
+            'company' => 'required|string|max:45',
         ]);
     }
-
     /**
      * Create a new user instance after a valid registration.
      *
@@ -63,10 +71,14 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        // poziv validatora!
         return User::create([
-            'name' => $data['name'],
+            'first_name' => $data['first_name'],
+            'last_name' => $data['last_name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'country' => $data['country'],
+            'company' => $data['company'],
         ]);
     }
 }

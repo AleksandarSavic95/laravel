@@ -31,7 +31,7 @@ class HomeController extends Controller
         return view('weekendHouse');
     }
 
-    public function index() {
+    public function zero() {
         return 'O!';
     }
 }

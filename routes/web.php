@@ -15,10 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', function () {
-    return 'Vozdra!';
-})->middleware('home');
-
 Route::get('/houm', 'HomeController@index');
 
 Route::get('/vikendica', 'HomeController@weekendHouse');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

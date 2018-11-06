@@ -46,5 +46,9 @@
     </script>
 
     <script src="{{ asset('js/after.js') }}"></script>
+
+    <script src="{{ asset('js/arrays-objects.js') }}"></script>
+    <script src="{{ asset('js/classes.js') }}"></script>
+    <script src="{{ asset('js/promises-callbacks.js') }}"></script>
 </body>
 </html>

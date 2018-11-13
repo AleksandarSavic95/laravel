@@ -30,6 +30,21 @@
         @include('layouts.footer')
     </div>
 
+    <!-- <script src="{{ asset('js/zdravstvena/util.js') }}"></script>
+    <script src="{{ asset('js/zdravstvena/osobe/osoba.js') }}"></script>
+    <script src="{{ asset('js/zdravstvena/osobe/pacijent.js') }}"></script>
+    <script src="{{ asset('js/zdravstvena/osobe/doktor.js') }}"></script>
+    <script src="{{ asset('js/zdravstvena/pregledi/pregled.js') }}"></script>
+    <script src="{{ asset('js/zdravstvena/pregledi/secer.js') }}"></script>
+    <script src="{{ asset('js/zdravstvena/pregledi/holesterol.js') }}"></script>
+    <script src="{{ asset('js/zdravstvena/pregledi/pritisak.js') }}"></script>
+    <script src="{{ asset('js/zdravstvena/test.js') }}"></script> -->
+
+    <script src="{{ asset('js/zdravstvena/bundle.js') }}"></script>
+
+
+    <!-- scope testing scripts START --
+
     <script src="{{ asset('js/b4.js') }}"></script>
 
     <script src="{{ asset('js/scope-test.js') }}"></script>
@@ -50,5 +65,7 @@
     <script src="{{ asset('js/arrays-objects.js') }}"></script>
     <script src="{{ asset('js/classes.js') }}"></script>
     <script src="{{ asset('js/promises-callbacks.js') }}"></script>
+    
+    <! -- scope testing scripts END -->
 </body>
 </html>
